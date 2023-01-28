@@ -1,0 +1,48 @@
+﻿
+@{
+    ViewData["Title"] = "Create";
+}
+@model TeamVM
+<div class="col-12 grid-margin stretch-card">
+    <div class="card">
+        <div class="card-body">
+            <form class="forms-sample" method="post" enctype="multipart/form-data">
+                <div class="form-group">
+                    <label asp-for="Image">Image</label>
+                    <input asp-for="Image" />
+                    <span asp-validation-for="Image"></span>
+        
+                    <label asp-for="Name">Name</label>
+                    <input asp-for="Name"/>
+                    <span asp-validation-for="Name"></span>
+
+                    <label asp-for="Surname">Surname</label>
+                    <input asp-for="Surname" />
+                    <span asp-validation-for="Surname"></span>
+
+                    <label asp-for="PozitionId">Pozition</label>
+                    <input asp-for="PozitionId" />
+                    <span asp-validation-for="PozitionId"></span>
+
+                    <label asp-for="Description">Description</label>
+                    <input asp-for="Description" />
+                    <span asp-validation-for="Description"></span>
+
+                    <label asp-for="GooglePlus">GooglePlus</label>
+                    <input asp-for="GooglePlus" />
+                    <span asp-validation-for="GooglePlus"></span>
+
+                    <label asp-for="Facebook">Facebook</label>
+                    <input asp-for="Facebook" />
+                    <span asp-validation-for="Facebook"></span>
+
+                    <label asp-for="Linkedin">Linkedin</label>
+                    <input asp-for="Linkedin" />
+                    <span asp-validation-for="Linkedin"></span>
+                    <button class="Sumbit btn-success">Sumbit</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+

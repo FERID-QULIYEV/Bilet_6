@@ -1,0 +1,55 @@
+﻿
+@{
+    ViewData["Title"] = "Index";
+}
+@model List<Team>
+<div class="table-responsive">
+    <a class="btn btn-dark" asp-area="Manage" asp-controller="Team" asp-action="Create">Create</a>
+    <table class="table">
+        <thead>
+            <tr>
+                <th>Name</th>
+                <th>Surname</th>
+                <th>Description</th>
+                <th>Facebook</th> 
+                <th>Linkedin</th>
+                <th>GooglePlus</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var item in (Model ?? new List<Team>()))
+            {
+                <tr>
+                    <th>@item.Image</th>
+                    <th>@item.Name</th>
+                    <th>@item.Surname</th>
+                    <th>@item.Description</th>
+                    <th>@item.Facebook </th>
+                    <th>@item.Linkedin </th>
+                    <th>@item.GooglePlus</th>
+                    <th><a class="btn btn-danger"  asp-action="Delete">Delete</a></th>
+                    <th><a class="btn btn-warning" asp-area="Manage" asp-controller="Team" asp-action="Update">Update</a></th>
+                </tr>
+            }
+        </tbody>
+    </table>
+            <nav aria-label="Page navigation example">
+                <ul class="pagination">
+                    <li class="page-item">
+                        <a class="page-link" href="#" aria-label="Previous">
+                            <span aria-hidden="true">&laquo;</span>
+                            <span class="sr-only">Previous</span>
+                        </a>
+                    </li>
+                    <li class="page-item"><a class="page-link" href="#">1</a></li>
+                    <li class="page-item"><a class="page-link" href="#">2</a></li>
+                    <li class="page-item"><a class="page-link" href="#">3</a></li>
+                    <li class="page-item">
+                        <a class="page-link" href="#" aria-label="Next">
+                            <span aria-hidden="true">&raquo;</span>
+                            <span class="sr-only">Next</span>
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+</div>
